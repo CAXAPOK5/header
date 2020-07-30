@@ -20,6 +20,10 @@
  */
 .ce-header__icon {}
 
+.ce-header[contentEditable=true][data-placeholder]:empty::before {
+  display: block;
+}
+
 .ce-header[contentEditable=true][data-placeholder]::before{
   position: absolute;
   content: attr(data-placeholder);
@@ -28,10 +32,4 @@
   display: none;
 }
 
-.ce-header[contentEditable=true][data-placeholder]:empty::before {
-  display: block;
-}
 
-.ce-header[contentEditable=true][data-placeholder]:empty:focus::before {
-  display: none;
-}
